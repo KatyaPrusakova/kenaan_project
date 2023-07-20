@@ -1,4 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+frontend/**
 
 # dependencies
 /node_modules
@@ -8,31 +9,35 @@
 # testing
 /coverage
 
+# database
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
 # production
 /build
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.pem
 
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-src/components/FirebaseAuth/firebase-config.json
-.firebaserc
-firebase.json
-.firebase/hosting.YnVpbGQ.cache
-firestore-debug.log
-functions/.eslintrc.json
-firebase-debug.log
-src/inc/stripe.json
-functions/stripe.json
-ui-debug.log
-functions/config.json
-functions/mailgun.json
-.firebase/hosting.cHVibGlj.cache
-.c9/
+.pnpm-debug.log*
+
+# local env files
+# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
